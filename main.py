@@ -9,38 +9,28 @@ li_votes = 0
 otooley_votes = 0
 
 #file path
-election_csv = os.path.join("Desktop", "Python_Challenge_1","election_data.csv") 
+election_csv = os.path.join("Python_Challenge_1", "election_data.csv") 
 
 
+for row in election_csv:
+        # Total votes
+        total_votes += 1
 
-#opening csv file
-with open(election_csv) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter = ',')
-
-    print(csvreader)
-       
-#percentage of total votes for each candidate
+#conditionals 
+if (row[2] == "Khan"):
+        khan_votes += 1
+elif (row[2] == "Correy"):
+        correy_votes += 1
+elif (row[2] == "Li"):
+        li_votes += 1
+else:
+        otooley_votes += 1
+    
+ #percentage of total votes for each candidate
 percentage_khan = (khan_votes/total_votes) * 100
 percentage_correy = (correy_votes/total_votes) * 100
 percentage_li = (li_votes/total_votes) * 100
 percentage_otooley = (otooley_votes/total_votes) * 100
-    
-for row in csvreader:
-       
-       # Total votes
-        total_votes += 1
-
-        #conditionals 
-        if (row[2]) == "Khan":
-            khan_votes += 1
-        elif (row[2]) == "Correy":
-            correy_votes += 1
-        elif (row[2]) == "Li":
-            li_votes += 1
-        else:
-            otooley_votes += 1
-    
- 
 
 #Winner of election
 winner = max(khan_votes, correy_votes, li_votes, otooley_votes)
@@ -62,3 +52,10 @@ else:
     print(f"O'Tooley: {str(percentage_otooley)}")
     print(f"Winner: {winner_name}")
 
+#opening csv file
+with open(election_csv) as csvfile:
+    csvreader = csv.reader(csvfile, delimiter = ',')
+
+    print(csvreader)
+
+    
