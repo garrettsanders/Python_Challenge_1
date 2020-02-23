@@ -11,17 +11,20 @@ otooley_votes = 0
 #file path
 election_csv = os.path.join("Python_Challenge_1", "election_data.csv") 
 
+candidate_list = ["Khan", "Correy", "Li", "O'Tooley"]
+
 
 for row in election_csv:
         # Total votes
         total_votes += 1
 
+
 #conditionals 
-if (row[2] == "Khan"):
+if (row[2]) == "Khan":
         khan_votes += 1
-elif (row[2] == "Correy"):
+elif (row[2]) == "Correy":
         correy_votes += 1
-elif (row[2] == "Li"):
+elif (row[2]) == "Li":
         li_votes += 1
 else:
         otooley_votes += 1
@@ -58,4 +61,3 @@ with open(election_csv) as csvfile:
 
     print(csvreader)
 
-    
