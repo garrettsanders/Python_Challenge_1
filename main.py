@@ -9,12 +9,12 @@ li_votes = 0
 otooley_votes = 0
 
 #file path
-csvpath = os.path.join("Desktop","python-challenge", "Pypoll", "election_data.csv") 
+election_csv = os.path.join("Desktop", "Python_Challenge_1","election_data.csv") 
 
 
 
 #opening csv file
-with open(csvpath) as csvfile:
+with open(election_csv) as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ',')
 
     print(csvreader)
