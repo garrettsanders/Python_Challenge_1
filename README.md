@@ -1,5 +1,14 @@
 # Python_Challenge_1
 
-In the conditionals section I could not figure out how to get rid of the error code, "string index out of range."
+Election Results
+-------------------------
+Total Votes: 3521001
+-------------------------
+Khan: 63.000% (2218231)
+Correy: 20.000% (704200)
+Li: 14.000% (492940)
+O'Tooley: 3.000% (105630)
+-------------------------
+Winner: Khan
+-------------------------
 
-Would love feedback on how to fix this issue. 
